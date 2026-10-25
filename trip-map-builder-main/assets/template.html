@@ -237,7 +237,200 @@ a:hover { text-decoration: underline; }
 // ║  REPLACE THIS SECTION — Hotel and Days data                 ║
 // ╚══════════════════════════════════════════════════════════════╝
 
-const HOTEL = { name: 'Hotel Name', lat: 0, lng: 0 };
+const HOTEL = {
+  name: 'Nata Raka Villa',
+  lat: -8.535,
+  lng: 115.255
+};
+
+const DAYS = [
+  {
+    id: 0,
+    label: '总览',
+    color: '#0071e3',
+    locations: []
+  },
+  {
+    id: 1,
+    label: '11/13',
+    date: '2026年11月13日',
+    title: '抵达巴厘岛 · 乌布',
+    color: '#ff9500',
+    locations: [
+      {
+        name: '巴厘岛机场 DPS',
+        lat: -8.748,
+        lng: 115.167,
+        type: 'transport',
+        time: '13:30',
+        desc: '抵达巴厘岛，领取行李',
+        gmap: 'Ngurah Rai International Airport Bali'
+      },
+      {
+        name: 'Nata Raka Villa',
+        lat: -8.535,
+        lng: 115.255,
+        type: 'hotel',
+        time: '下午',
+        desc: '入住乌布 Singakerta 别墅',
+        gmap: 'Nata Raka Villa Singakerta Bali'
+      },
+      {
+        name: 'Malam Asian Grill',
+        lat: -8.506,
+        lng: 115.262,
+        type: 'food',
+        time: '晚上',
+        desc: '亚洲风味晚餐，请出发前确认地址',
+        gmap: 'Malam Asian Grill Bali'
+      },
+      {
+        name: 'Night Rooster',
+        lat: -8.506,
+        lng: 115.262,
+        type: 'drink',
+        time: '晚餐后',
+        desc: '有精力的话去酒吧小酌',
+        gmap: 'Night Rooster Ubud Bali'
+      }
+    ]
+  },
+  {
+    id: 2,
+    label: '11/14',
+    date: '2026年11月14日',
+    title: '乌布体验 · Melasti 海滩',
+    color: '#34c759',
+    locations: [
+      {
+        name: 'Nata Raka Villa 早餐',
+        lat: -8.535,
+        lng: 115.255,
+        type: 'food',
+        time: '早上',
+        desc: '在别墅享用早餐',
+        gmap: 'Nata Raka Villa Singakerta Bali'
+      },
+      {
+        name: '颂钵体验',
+        lat: -8.506,
+        lng: 115.262,
+        type: 'spot',
+        time: '上午',
+        desc: '体验颂钵音疗，提前预约',
+        gmap: 'singing bowl sound healing Ubud Bali'
+      },
+      {
+        name: '乌布早午餐',
+        lat: -8.506,
+        lng: 115.262,
+        type: 'food',
+        time: '中午',
+        desc: '在乌布享用早午餐',
+        gmap: 'brunch Ubud Bali'
+      },
+      {
+        name: 'Melasti Beach',
+        lat: -8.848,
+        lng: 115.153,
+        type: 'spot',
+        time: '下午',
+        desc: '前往南部海滩游玩',
+        gmap: 'Melasti Beach Bali'
+      },
+      {
+        name: '南部 Spa',
+        lat: -8.849,
+        lng: 115.155,
+        type: 'spot',
+        time: '傍晚',
+        desc: '海滩附近按摩放松',
+        gmap: 'spa near Melasti Beach Bali'
+      }
+    ]
+  },
+  {
+    id: 3,
+    label: '11/15',
+    date: '2026年11月15日',
+    title: '周日市集 · 水明漾',
+    color: '#af52de',
+    locations: [
+      {
+        name: '退房出发',
+        lat: -8.535,
+        lng: 115.255,
+        type: 'transport',
+        time: '早上',
+        desc: '从乌布退房，带行李前往海边',
+        gmap: 'Nata Raka Villa Singakerta Bali'
+      },
+      {
+        name: 'La Brisa Sunday Market',
+        lat: -8.655,
+        lng: 115.132,
+        type: 'spot',
+        time: '上午至下午',
+        desc: '逛周日市集；出发前确认当日活动时间',
+        gmap: 'La Brisa Sunday Market Bali'
+      },
+      {
+        name: '水明漾酒店',
+        lat: -8.691,
+        lng: 115.168,
+        type: 'hotel',
+        time: '下午',
+        desc: '入住水明漾酒店，放好行李',
+        gmap: 'hotels in Seminyak Bali'
+      },
+      {
+        name: '水明漾购物',
+        lat: -8.691,
+        lng: 115.168,
+        type: 'spot',
+        time: '下午',
+        desc: '逛街购物',
+        gmap: 'shopping in Seminyak Bali'
+      },
+      {
+        name: '水明漾 Spa',
+        lat: -8.691,
+        lng: 115.168,
+        type: 'spot',
+        time: '傍晚',
+        desc: '按摩放松，晚上早点休息',
+        gmap: 'spa in Seminyak Bali'
+      }
+    ]
+  },
+  {
+    id: 4,
+    label: '11/16',
+    date: '2026年11月16日',
+    title: '清晨前往机场',
+    color: '#5ac8fa',
+    locations: [
+      {
+        name: '水明漾酒店出发',
+        lat: -8.691,
+        lng: 115.168,
+        type: 'transport',
+        time: '约04:00',
+        desc: '提前预约车辆前往机场',
+        gmap: 'Seminyak Bali'
+      },
+      {
+        name: '巴厘岛机场 DPS',
+        lat: -8.748,
+        lng: 115.167,
+        type: 'transport',
+        time: '航班07:20',
+        desc: '搭乘飞往新加坡的航班',
+        gmap: 'Ngurah Rai International Airport Bali'
+      }
+    ]
+  }
+];
 
 const DAYS = [
   { id: 0, label: '总览', color: '#0071e3', locations: [] },
